@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Age calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./index.css">
+  <script src="./jquery.js"></script>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <ul>
+        <li>
+          <label for="dayInput">Day</label>
+          <input id="dayInput" type="number" maxlength="2" placeholder="DD">
+          <span>This feild is required</span>
+        </li>
+        <li>
+          <label for="monthInput">Month</label>
+          <input id="monthInput" type="number" placeholder="MM">
+          <span>This feild is required</span>
+        </li>
+        <li>
+          <label for="yearInput">Year</label>
+          <input id="yearInput" type="number" placeholder="YYYY">
+          <span>This feild is required</span>
+        </li>
+      </ul>
+    </div>
+    <div class="container" id="ageOutput">
+      <button id="submitbtn"><img src="./assets/images/icon-arrow.svg" alt="Submit"></button>
+      <p><span id="yearOutput">0</span>years</p>
+      <p><span id="monthOutput">0</span>months</p>
+      <p><span id="daysOutput">0</span>days</p>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Sumit0o0</a>.
+    </div>
+  </main>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>

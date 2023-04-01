@@ -1,0 +1,227 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/* ------------------------------------ END ----------------------------------- */
+
+body{
+    background-color: hsl(0, 0%, 94%);
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    background-color: #fff;
+    width: fit-content;
+    padding: 4.5%;
+    border-radius: 20px 20px 80px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: -4px 4px 18px 6px hsla(0, 0%, 8%, 0.121);
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    width: fit-content;
+}
+
+li{
+    margin: 0 12px;
+    border-radius: 6px;
+}
+
+label{
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: hsl(0, 1%, 44%);
+    letter-spacing: 2px;
+}
+
+input{
+  display: block;
+    width: 65px;
+    outline: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid hsl(0, 0%, 86%);
+    font-weight: 800;
+    color: hsl(0, 0%, 8%);
+}
+
+input.colorChange{
+    border:  1px solid hsl(259, 100%, 65%);
+    caret-color: hsl(259, 100%, 65%);
+}
+
+input::placeholder{
+    font-weight: 800;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+li span{
+    color: hsl(0, 100%, 67%);
+    font-size: 0.6rem;
+    font-weight: 600;
+    visibility: hidden;
+    display: block;
+    margin-left: 4px;
+    margin-top: 2px;
+}
+
+li span.visble{
+    visibility: visible;
+}
+
+label.redoutput{
+    color: hsl(0, 100%, 67%);
+}
+
+#ageOutput{
+    margin-top: 32px;
+    border-top: 1px solid hsl(0, 0%, 86%);
+}
+
+#submitbtn{
+    border-radius: 50%;
+    padding: 6px;
+    background-color: hsl(259, 100%, 65%);
+    border: none;
+    cursor: pointer;
+    transition: 0.6s ease-out;
+}
+
+#submitbtn:hover{
+    background-color: hsl(0, 0%, 8%);
+    transition: 0.3s ease-in;
+    box-shadow: 4px 4px 6px hsla(0, 0%, 8%, 0.237);
+}
+
+#ageOutput p{
+    font-size: 2.9rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+#ageOutput span{
+    color: hsl(259, 100%, 65%);
+    margin-right: 6px;
+}
+
+@media screen and (max-width: 720px) {
+    #submitbtn{
+        position: relative;
+        top: -28px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    li{
+      height: 100px;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    main{
+        padding: 2%;
+        padding-right: 8%;
+    }
+    #ageOutput{
+        position: relative;
+        padding-top: 22px;
+    }
+
+    #ageOutput p{
+        font-size: 4.2rem;
+    }
+
+    #submitbtn{
+        position: absolute;
+        top: -28px;
+        right: -55px; 
+    }
+    input{
+        width: 80%;
+        padding: 12px 22px;
+    }
+}
+
+.attribution{
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 12px;
+    transition: 0.7s ease-out;
+    opacity: 0.1;
+}
+
+.attribution a{
+    color: #c9c9c9;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.attribution:hover{
+    transition: 0.4s ease-in;
+    opacity: 1;
+}
+
+.attribution a:hover{
+   color: hsl(259, 100%, 65%);
+}
